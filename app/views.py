@@ -13,9 +13,11 @@ def before_request():
     g.user = current_user
     
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def startPage():
-    return render_template('first_page.html')
+    items = Post.query.all()
+    return render_template('first_page.html',
+                          items=items)
 @app.route('/')
 @app.route('/index', methods=['GET', 'POST'])
 @app.route('/index/<int:page>', methods=['GET', 'POST'])
