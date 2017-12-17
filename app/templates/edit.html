@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <section class="hero-area">
+	        <div class="container">
+	            <div class="row">
+                    <div class="col-md-6 text-center">
+                        <img src="/static/images/edit.jpg" alt="">
+                    </div>
+	                <div class="col-md-6">
+	                    <div class="block">
+	                        <h1>Дорогой, {{user.login}}!</h1>
+	                        <p>Измените, что Вам не нравится!</p>
+	                    </div>
+	                </div>
+	            </div>
+
+	        </div>
+
+    </section>
+
+
+
+
+ <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <form method="POST" class="form-group">
+                    <p>Need some changes? Go!</p>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="inputTitle">Great title</label>
+                            <input id="inputTitle" name="inputTitle" value="{{ post1.title }}" class="form-control" placeholder="Great title"  required data-validation-required-message="Please enter title.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="inputText">Important text</label>
+                            <input id="inputText"  name="inputText"  value="{{post1.text }}" class="form-control" placeholder="Important text"  required data-validation-required-message="Please enter text.">
+                            <!--<p class="help-block text-danger"></p>-->
+                        </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-default">Post</button>
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
