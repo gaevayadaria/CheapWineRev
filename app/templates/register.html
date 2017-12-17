@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block content %}
+   <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+
+    <section class="hero-area">
+	        <div class="container">
+	            <div class="row">
+                    <div class="col-md-6 text-center">
+                        <img src="/static/images/reg1.jpg" alt="">
+                    </div>
+	                <div class="col-md-6">
+	                    <div class="block">
+	                        <h1 class="">Пожалуйста,   пройдите регистрацию!</h1>
+	                        <p>Вам очень нужно повеселиться!</p>
+	                    </div>
+	                </div>
+	            </div><!-- .row close -->
+
+	        </div><!-- .container close -->
+
+    </section><!-- header close -->
+
+                        <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <form method="POST" class="form-group">
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for ="inputEmail">Email Address</label>
+                            <input id="inputEmail" name="inputEmail" type="email" class="form-control" placeholder="Email" required data-validation-required-message="Please enter your email address.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="inputLogin">Login</label>
+                            <input id="inputLogin" name="inputLogin" class="form-control" placeholder="Login"  required data-validation-required-message="Please enter login.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="inputName">Name</label>
+                            <input id="inputName" name="inputName" class="form-control" placeholder="Name"  required data-validation-required-message="Please enter your name.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="inputSurname">Surname</label>
+                            <input id="inputSurname" name="inputSurname" class="form-control" placeholder="Surname"  required data-validation-required-message="Please enter your surname.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="inputPassword">Password</label>
+                            <input id="inputPassword" name="inputPassword" type="password" class="form-control" placeholder="Password"  required data-validation-required-message="Please enter password">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="inputPassword2">Password</label>
+                            <input id="inputPassword2" name="inputPassword2" type="password" class="form-control" placeholder="Password"  required data-validation-required-message="Please repeat password">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <button type="submit" class="btn btn-default">Sign up</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>
+
+
+
+
+{%endblock%}
