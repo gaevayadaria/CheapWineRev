@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+    <section class="hero-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img src="/static/images/post.jpg" alt="">
+                </div>
+                <div class="col-md-6">
+                    <div class="block">
+                        <h1>{{ user.login }}?</h1>
+                        <p>Это Ваши отзывы! ГЫ
+                            Моя история отличается от ваших. Про печаль, одинокий вечер, тоску в душе и т.д. писать не буду. Это был тёплый, солнечный день в деревне, в глухой, далёкой деревне, куда даже автолавки не приезжают уже лет 5, коровы гоняют пастухов, а магазин работает 3 часа в день, в котором кроме болтающих бабушек и запаха плесени на потолке ничего и не осталось.
+                        </p>
+                    </div>
+                </div>
+            </div><!-- .row close -->
+
+        </div><!-- .container close -->
+
+    </section><!-- header close -->
+
+    <!-- Main Content -->
+    {% for post in posts %}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-preview">
+                        <a href="">
+                            <h2 class="post-title">
+                                {{ post.title }}
+                            </h2>
+                            <h3 class="post-subtitle">
+                                {{ post.text }}
+                            </h3>
+                        </a>
+                        <p class="post-meta">Posted by <a>{{ user.login }}</a> on {{ post.timestamp }}
+                            <br>
+                            <a href="{{ url_for('delete', id = post.id) }}">{{ ('Delete') }}</a>
+                            <a href="{{ url_for('edit', id = post.id) }}">{{ ('Edit') }}</a>
+                        </p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
